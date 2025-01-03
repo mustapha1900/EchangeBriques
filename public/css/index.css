@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Protest+Riot&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Oswald", Arial;
+    background-image: url('../assets/Background3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+}
+
+header,
+footer {
+    padding: 10px;
+    text-align: center;
+    color: white;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+
+#echange_table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+
+}
+
+#title_table {
+    background-color: #C0392B;
+    text-align: center;
+    font-weight: 300;
+    border-radius: 4px;
+    color: white;
+    padding: 4px;
+    border: solid white;
+
+}
+
+#echange_table th,
+#echange_table td {
+    padding: 8px;
+    text-align: left;
+}
+
+#echange_table th {
+    font-weight: bold;
+    color: #333;
+    background-color: #cba546;
+
+}
+
+
+
+#echange_table tbody tr:hover {
+    background-color: #F5F5DC;
+    transition: background-color 0.3s ease;
+}
+
+a {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #C0392B;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+
+
+#title_table:hover,
+a:hover {
+    background-color: #cba546;
+    transition: background-color 0.3s ease;
+}
+
+#title,
+#profil {
+    display: inline-block;
+    margin: 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+#menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+#title {
+    display: inline-block;
+    background-color: #C0392B;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 350;
+}
+
+#github {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+}
+
+#github:hover {
+    background-color: #cba546;
+    transition: background-color 0.3s ease;
+}
+
+#btn_creerEchange{
+    text-align: center;
+}
+#btn_creerEchange_message 
+{
+    color: #C0392B;
+    text-align: center;
+    background-color: #F5F5DC;
+    text-align: center;
+}

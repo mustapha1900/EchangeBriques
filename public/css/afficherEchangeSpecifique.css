@@ -1,0 +1,101 @@
+
+body {
+    
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 0;
+}
+
+#main-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+
+h2 { margin: 0 0 20px 0; 
+    background-color: beige;
+     text-align: center; 
+     border-radius: 6px; padding: 10px;
+    font-size: large;} 
+
+#container-table,
+#boutons-container {
+    flex: 1;
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+   
+}
+
+th {
+    font-weight: bold;
+    color: #333;
+    background-color: #cba546;
+}
+
+tr:hover {
+    background-color: #F5F5DC;
+}
+
+td img {
+    width: 60px;
+    height: auto;
+}
+
+#valeur-echange {
+    margin-top: 40px;
+    font-weight: bold;
+    background-color: beige;
+    text-align: center;
+    border-radius: 6px;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.btn-proposer {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #C0392B;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-proposer:hover {
+    background-color: #cba546;
+}
+
+#message-proposition,
+#liste-proposition-titre {
+    background-color: beige;
+    text-align: center;
+    border-radius: 6px;
+}
+
+#liste-proposition {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+#container-table{
+    max-height: fit-content;
+}
+

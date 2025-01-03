@@ -1,0 +1,27 @@
+<h2>Inscription</h2>
+    <form id="form-inscription">
+        <div>
+            <label for="nom">Nom </label>
+            <input  type="text" id="nom_utilisateur" name="nom">
+        </div>
+        <div>
+            <label for="prenom">Prénom </label>
+            <input type="text" id="prenom_utilisateur" name="prenom">
+        </div>
+        <div>
+            <label for="courriel">Courriel </label>
+            <input type="email" id="courriel" name="courriel">
+        </div>
+        <div>
+            <label for="motdepasse">Mot de passe </label>
+            <input type="password" id="mot_de_passe" name="motdepasse">
+        </div>
+        <div>
+            <label for="confirmation">Confirmez le mot de passe </label>
+            <input type="password" id="confirmation_mot_de_passe" name="confirmation" required>
+        </div>
+        <div>
+            <button type="submit" id="bouton_inscription">S'inscrire</button>
+        </div>
+        <div id="erreur-inscription"></div>
+    </form>

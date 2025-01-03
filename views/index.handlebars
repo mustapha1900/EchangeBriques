@@ -1,0 +1,29 @@
+<h2 id="title_table">Historique des échanges des utilisateurs</h2>
+<table id="echange_table">
+    <thead>
+        <tr>
+            <th scope="col">Échange </th>
+            <th scope="col">Nom </th>
+            <th scope="col">Prenom </th>
+            <th scope="col">Voir votre Échange</th>
+        </tr>
+    </thead>
+    <tbody id="tbody">
+        {{#each TousLesEchanges}}
+        <tr>
+            <td>{{this.nom_echange}}</td>
+            <td>{{this.nom_utilisateur}}</td>
+            <td>{{this.prenom_utilisateur}}</td>
+            <td>
+                <a href="/afficherEchangeSpecifique?id_echange={{this.id_echange}}">Voir Echange</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+{{#if utilisateurConnecte}}
+<a id="btn_creerEchange" href="/CreerEchange">Créer un Échange</a>
+{{else}}
+<p id="btn_creerEchange_message">Veuillez vous connecter pour créer un échange.</p>
+{{/if}}

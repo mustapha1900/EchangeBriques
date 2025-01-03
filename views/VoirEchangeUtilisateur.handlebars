@@ -1,0 +1,35 @@
+
+<h2 id="title_table">Échanges associés à votre compte</h2>
+<table id="echange_table">
+    <thead>
+        <tr>
+            <th scope="col">Nom de l'Échange</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prénom</th>
+            <th scope="col">Voir Votre Echange</th>
+            <th scope="col">Supprimer</th>
+        </tr>
+    </thead>
+    <tbody id="tbody">
+        {{#if SesEchanges.length}}
+        {{#each SesEchanges}}
+        <tr>
+            <td>{{this.nom_echange}}</td>
+            <td>{{this.nom_utilisateur}}</td>
+            <td>{{this.prenom_utilisateur}}</td>
+            <td>
+                <a href="/afficherEchangeSpecifique?id_echange={{this.id_echange}}">voir échange</a>
+            </td>
+            <td>
+                <button class="bouton-supprimer" data-id="{{this.id_echange}}">X</button>
+            </td>
+        </tr>
+        {{/each}}
+        {{else}}
+        <tr>
+            <td colspan="5">Aucun échange disponible.</td>
+        </tr>
+        {{/if}}
+    </tbody>
+</table>
+<a id="btn_creerEchange" href="/CreerEchange">Créer un Échange</a>

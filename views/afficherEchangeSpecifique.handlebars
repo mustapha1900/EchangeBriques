@@ -1,0 +1,57 @@
+<div id="main-container">
+<div id="container-table">
+<h2 id="nom-createur-echange">Echange crée par {{prenom_utilisateur}} {{nom_utilisateur}}</h2>
+<table id="brique-table">
+    <thead>
+        <tr>
+            <th scope="col">Nom de la Brique</th>
+            <th scope="col">Image</th>
+            <th scope="col">Valeur</th>
+            <th scope="col">Quantité</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each echange}}
+        <tr>
+            <td>{{this.nom_brique}}</td>
+            <td><img src="../assets/{{this.image}}" alt="{{this.nom_brique}}"></td>
+            <td>{{this.valeur}} $/brique</td>
+            <td>{{this.quantite_brique}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+
+</table>
+<div id="valeur-echange">
+    Valeur totale de l'échange :{{valeurEchange}} $
+</div>
+</div>
+{{!-- condition pour afficher le bouton proposer --}}
+
+{{#if afficherBoutonProposer}}
+<div class="boutons-container">
+<a href="/proposer-echange?id_echange={{this.id_echange}}" class="btn-proposer">Proposer</a>
+{{/if}}
+
+
+{{#if estCreateur}}
+<ul>
+    {{#if proposition}}
+    <p id="liste-proposition-titre">Propositions pour cet échange :</p>
+    {{#each proposition}}
+    <li id="liste-proposition">
+          <a href="/voir-proposition?id_proposition={{this.id_proposition}}">{{this.id_proposition}} - {{this.prenom_utilisateur}} {{this.nom_utilisateur}}</a>
+        <a href="/voir-proposition?id_proposition={{this.id_proposition}}">
+              Voir
+            la proposition
+        </a>
+    </li>
+    {{/each}}
+    {{/if}}
+</ul>
+{{else}}
+<p id="message-proposition">Aucune proposition pour cet échange.</p>
+{{/if}}
+</div>
+</div>

@@ -1,0 +1,41 @@
+#form-connexion{
+    background-color: rgba(255, 255, 255, 0.4);
+     padding: 20px; 
+     border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 300px;
+}
+
+h2{
+    background-color: #C0392B;
+    text-align: center;
+    font-weight: 300;
+    border-radius: 4px;
+    color: white;
+    padding: 4px;
+    border: solid white;
+
+}
+div { margin-bottom: 15px;}
+label { display: block; margin-bottom: 5px; color: #333; }
+input { width: 100%; padding: 5px; border: 1px solid #ccc; border-radius:6px}
+
+button{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #C0392B;
+    border: solid white;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+   
+}
+button:hover { background-color:#cba546 ;}
+
+#message-connexion { 
+    color: #C0392B;
+    text-align: center;
+    background-color: #F5F5DC;
+    }

@@ -1,0 +1,29 @@
+<h2 id="title_table">Créer votre proposition</h2>
+<div id="contenant">
+    <form id="form-proposition" novalidate data-id-echange = "{{id_echange}}" data-id-utilisateur ="{{id_utilisateur}}">
+        <table id="brique-table">
+            <thead>
+                <tr>
+                    <th scope="col">Nom de la Brique</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Valeur</th>
+                    <th scope="col">Quantité proposée</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each briques}}
+                <tr>
+                    <td>{{this.nom}}</td>
+                    <td><img src="../assets/{{this.image}}" alt="{{this.nom}}" style="width: 90px;"></td>
+                    <td>{{this.valeur}} $/brique</td>
+                    <td>
+                        <input  type="number" min="0" max="100" placeholder="0" data-id-brique="{{this.id_brique}}">
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <button type="submit" id="submit-proposition">Soumettre la proposition</button>
+    </form>
+    <p id="erreur-quantite-proposition"></p>
+</div>
